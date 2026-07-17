@@ -1,9 +1,9 @@
-## MiniSync - Sistema de Sincronización de Archivos
+# MiniSync - Sistema de Sincronización de Archivos
 Mateo Guamaní  
 
 MiniSync es un programa desarrollado en C para sistemas Linux. Funciona como un motor de sincronización unidireccional parecido a un sistema de almacenamiento como Google Drive y otros parecidos, manteniendo una carpeta de respaldo (Destino) como un reflejo de una carpeta de trabajo (Origen).
 
-# Características Principales
+## Características Principales
 Gestión de Procesos: Se utiliza la llamada fork() para instanciar un "Pool" de 4 procesos Workers y desvincula un proceso Demonio independiente "Logger". Además, gestiona su ciclo de vida interceptando señales "SIGINT" para un apagado correcto.
 
 Gestión de Entrada/Salida (E/S): Se optimiza las transferencias físicas en el disco repartiendo la carga de lectura/escritura entre los Workers paralelos, operando a bajo nivel con llamadas read() y write().
@@ -16,7 +16,7 @@ Comunicación Inter-Procesos (IPC): Emplea Tuberías sin nombres (pipes) para la
 
 Sincronización y Memoria Compartida: Proyecta un bloque de memoria RAM en el espacio de direcciones virtuales de los procesos (shm_open, mmap) para mantener estadísticas globales. La exclusión mutua se garantiza a tráves de Semáforos POSIX para evitar condiciones de carrera.
 
-# Estructura del Proyecto
+## Estructura del Proyecto
 
 Para mantener todo organizado y evitar el código acoplado, el sistema está dividido en varios archivos modulares según su responsabilidad:
 
@@ -34,7 +34,7 @@ cabeceras/ (*.h): Contiene los archivos de cabecera que definen las estructuras 
 
 
 
-# Requisitos del Sistema
+## Requisitos del Sistema
 
 Un entorno Linux o a su vez Windows Subsystem for Linux (WSL).
 
@@ -42,7 +42,7 @@ Compilador gcc.
 
 Herramienta make.
 
-# Compilación
+## Compilación
 
 El proyecto incluye un Makefile para facilitar la ejecución. Simplemente se abre la terminal en la raíz del proyecto y se ejecuta:
 
@@ -51,7 +51,7 @@ make
 
 Esto creara el ejecutable dentro de la carpeta bin/.
 
-# Instrucciones de Ejecución
+## Instrucciones de Ejecución
 
 Para iniciar el monitor de sincronización, se ejecuta el binario pasando como argumentos la ruta del directorio de origen y el de destino:
 
@@ -63,7 +63,7 @@ Ejemplo:
 ./bin/minisync ../OperativeSystems ../directoriosincro
 
 
-# Comportamiento Esperado:
+## Comportamiento Esperado:
 
 El programa iniciará el Pool de Workers y quedará vigilando en segundo plano.
 
@@ -72,7 +72,7 @@ Si se crea, modifica o se elimina algo en la carpeta de origen, el programa reac
 
 El historial de acciones se guardará en historial_sincronizacion.log.
 
-# Detener el programa
+## Detener el programa
 
 Dado que es un ciclo infinito diseñado para correr en segundo plano, se debe detenerlo manualmente presionando:
 Ctrl + C
