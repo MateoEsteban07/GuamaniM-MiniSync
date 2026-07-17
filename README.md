@@ -55,12 +55,12 @@ Esto creara el ejecutable dentro de la carpeta bin/.
 
 Para iniciar el monitor de sincronización, se ejecuta el binario pasando como argumentos la ruta del directorio de origen y el de destino:
 
-´´´./bin/minisync <directorio_origen> <directorio_destino>
+```./bin/minisync <directorio_origen> <directorio_destino>```
 
 
 Ejemplo:
 
-./bin/minisync ../OperativeSystems ../directoriosincro´´´
+```./bin/minisync ../OperativeSystems ../directoriosincro```
 
 
 ## Comportamiento Esperado:
@@ -75,5 +75,5 @@ El historial de acciones se guardará en historial_sincronizacion.log.
 ## Detener el programa
 
 Dado que es un ciclo infinito diseñado para correr en segundo plano, se debe detenerlo manualmente presionando:
-Ctrl + C
+```Ctrl + C```
 El manejador de señales atrapará el comando, cerrará los procesos de forma segura y liberará la memoria.
