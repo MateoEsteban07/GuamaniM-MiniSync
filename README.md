@@ -55,12 +55,12 @@ Esto creara el ejecutable dentro de la carpeta bin/.
 
 Para iniciar el monitor de sincronización, se ejecuta el binario pasando como argumentos la ruta del directorio de origen y el de destino:
 
-'''./bin/minisync <directorio_origen> <directorio_destino>
+´´´./bin/minisync <directorio_origen> <directorio_destino>
 
 
 Ejemplo:
 
-./bin/minisync ../OperativeSystems ../directoriosincro'''
+./bin/minisync ../OperativeSystems ../directoriosincro´´´
 
 
 ## Comportamiento Esperado:
