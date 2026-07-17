@@ -46,8 +46,8 @@ Herramienta make.
 
 El proyecto incluye un Makefile para facilitar la ejecución. Simplemente se abre la terminal en la raíz del proyecto y se ejecuta:
 
-make clean
-make
+```make clean```
+```make```
 
 Esto creara el ejecutable dentro de la carpeta bin/.
 
