@@ -133,7 +133,8 @@ void sincronizar_directorios(const char *origen, const char *destino, int pipe_e
                 }
             }
     }
-} closedir(dir);
+}
+    closedir(dir);
 
     limpiar_archivos_eliminados(origen, destino);
     
